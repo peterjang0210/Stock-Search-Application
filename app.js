@@ -25,25 +25,28 @@ const displaystockInfo = function () {
   }).then(function (response) {
     //retrieve company name + append
     const compName = response.quote.companyName;
-    const displayName = $(`<p>Name: ${compName}</p>`);
+    const displayName = $(`<p class = "name">Name: ${compName}</p>`);
     displayName.appendTo('#stocks-view');
 
     //retrieve logo + append
     const logoURL = response.logo.url;
-    const displayLogo = $(`<img src=${logoURL} alt ="${response.quote.companyName} logo">`);
+    const displayLogo = $(`<img id = "logo" src=${logoURL} alt ="${response.quote.companyName} logo">`);
     displayLogo.appendTo('#stocks-view');
 
     //retrieve price + append
     const price = response.quote.latestPrice;
-    const displayPrice = $(`<p>Price: ${price}</p>`);
+    const displayPrice = $(`<p class = "head">Price: ${price}</p>`);
     displayPrice.appendTo('#stocks-view');
 
     //retrieve news article headline + append
     let newsHeadline = '';
     for (let i = 0; i < response.news.length; i++) {
+      if(i > 9){
+        break;
+      }
       newsHeadline += `<p>${response.news[i]["headline"]}</p>`;
     }
-    const displayNews = $(`<p>News:${newsHeadline}<p>`);
+    const displayNews = $(`<p class = "head endSection">News Articles:${newsHeadline}<p>`);
     $('#stocks-view').append(displayNews);
   });
 

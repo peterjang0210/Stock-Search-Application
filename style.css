@@ -1,10 +1,21 @@
-header {
-    background-color: cadetblue;
-    padding: 10px;
-}
 
 body{
     font-family: 'PT Sans', sans-serif;
+    background-image: url(./analytics-business-chart-187041.jpg);
+}
+
+header {
+    background-color: cadetblue;
+    padding: 10px;
+    width: 79%;
+    margin: 0 auto;
+}
+main{
+    margin: 10px auto;
+    width: 80%;
+    background-color: rgba(245, 245, 245, 0.685);
+    padding: 10px;
+    border: 2px solid beige;
 }
 
 h2{
@@ -16,6 +27,37 @@ h2{
     margin: 5px;
 }
 
+label{
+    font-size: 20px;
+}
+
 #stock-form{
     margin-top: 10px;
+}
+
+#stock-input{
+    margin: 5px;
+    padding: 5px;
+}
+
+#stocks-view{
+    padding: 5px;
+}
+
+.name{
+    font-size: 30px;
+}
+
+.head{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#logo{
+    margin-bottom: 20px;
+}
+
+.endSection{
+    border-bottom: 1px solid gray;
+    width: 70%;
 }
