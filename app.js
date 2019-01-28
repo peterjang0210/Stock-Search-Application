@@ -89,8 +89,15 @@ const addButton = function (event) {
   render();
 }
 
+//clears stock info displayed on page
+const clearStocks = function (event) {
+  event.preventDefault();
+  $('#stocks-view').empty();
+}
+
 //add event listeners on buttons
 $('#add-stock').on('click', addButton);
 $('#buttons-view').on('click', '.stock', displaystockInfo);
+$('#clearBtn').on('click', clearStocks);
 render();
 
