@@ -55,7 +55,7 @@ const render = function () {
 
   //add new <button> tag to html dynamically w/ class + attr; then renders
   for (let i = 0; i < stocksList.length; i++) {
-    let newButton = $('<button>');
+    let newButton = $('<button class="btn-group btn btn-info"></button>');
     newButton.addClass('stock');
     newButton.attr('data-name', stocksList[i]);
     newButton.text(stocksList[i]);
