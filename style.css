@@ -7,7 +7,7 @@ body{
 header {
     background-color: cadetblue;
     padding: 10px;
-    width: 79%;
+    width: 80%;
     margin: 0 auto;
 }
 main{
@@ -42,6 +42,15 @@ label{
 
 #stocks-view{
     padding: 5px;
+}
+
+a{
+    color:#205ea0;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #212529;
 }
 
 .name{

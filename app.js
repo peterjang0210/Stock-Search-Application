@@ -23,6 +23,7 @@ const displaystockInfo = function () {
     url: queryURL,
     method: 'GET'
   }).then(function (response) {
+    console.log(response);
     //retrieve company name + append
     const compName = response.quote.companyName;
     const displayName = $(`<p class = "name">Name: ${compName}</p>`);
@@ -44,7 +45,7 @@ const displaystockInfo = function () {
       if(i > 9){
         break;
       }
-      newsHeadline += `<p>${response.news[i]["headline"]}</p>`;
+      newsHeadline += `<p><a href=${response.news[i]["url"]}>${response.news[i].headline}</a></p>`;
     }
     const displayNews = $(`<p class = "head endSection">News Articles:${newsHeadline}<p>`);
     $('#stocks-view').append(displayNews);
